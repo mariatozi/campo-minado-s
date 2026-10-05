@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campo Minado 😼</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="app">
+    <h1>💣 Campo Minado</h1>
+
+    <div class="levels" id="levels">
+      <button class="level-btn" data-level="veryEasy">Muito Fácil</button>
+      <button class="level-btn active" data-level="beginner">Fácil</button>
+      <button class="level-btn" data-level="intermediate">Médio</button>
+      <button class="level-btn" data-level="expert">Difícil</button>
+    </div>
+
+    <section class="panel">
+      <div class="counter" id="mines-counter">010</div>
+      <button class="face-btn" id="face-btn" title="Reiniciar jogo">🐱</button>
+      <div class="counter" id="timer-counter">000</div>
+    </section>
+
+    <section class="board-wrapper">
+      <div class="board" id="board"></div>
+    </section>
+
+    <p class="hint">
+      Clique esquerdo: revelar &nbsp;•&nbsp; Clique direito: marcar bandeira
+      &nbsp;•&nbsp; Clique em um número revelado com as bandeiras certas ao redor
+      para abrir os vizinhos automaticamente.
+    </p>
+  </main>
+
+  <div class="overlay hidden" id="overlay">
+    <div class="overlay-content">
+      <div class="overlay-icon" id="overlay-icon">😿</div>
+      <div class="overlay-text" id="overlay-text">Você perdeu!</div>
+      <button class="restart-btn" id="restart-btn">Jogar novamente</button>
+    </div>
+  </div>
+
+  <canvas id="confetti-canvas"></canvas>
+
+  <script src="js/confetti.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
